@@ -29,7 +29,7 @@ class MainAdapter(private val mList: List<DataItem>) :
         fun bindTextViewWithImageView(dataItem: DataItem) {
             binding.profileTextView.text = dataItem.profileTextViewString
             binding.profileEditText.setText(dataItem.profileEditTextString)
-            binding.profileImageView.setImageResource(dataItem.profileImageViewInt)
+            dataItem.profileImageViewInt?.let { binding.profileImageView.setImageResource(it) }
         }
     }
 

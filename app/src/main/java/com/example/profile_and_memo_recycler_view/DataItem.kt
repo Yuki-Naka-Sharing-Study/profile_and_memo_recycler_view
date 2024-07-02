@@ -5,6 +5,6 @@ data class DataItem(
     val profileTextViewString : String?,
     val profileEditTextString: String?,
     val profileCustomEditTextString: String?,
-    val profileImageViewInt: Int
+    val profileImageViewInt: Int?
 
 )

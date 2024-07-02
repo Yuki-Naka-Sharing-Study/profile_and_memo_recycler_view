@@ -37,7 +37,7 @@ class MainAdapter(private val mList: List<DataItem>) :
         RecyclerView.ViewHolder(binding.root) {
 
         fun bindEditTextWithoutImageView(dataItem: DataItem) {
-            binding.customProfileEditText.text = dataItem.profileCustomEditTextString
+            binding.customProfileEditText.setText(dataItem.profileCustomEditTextString)
             binding.profileEditText.setText(dataItem.profileEditTextString)
         }
     }

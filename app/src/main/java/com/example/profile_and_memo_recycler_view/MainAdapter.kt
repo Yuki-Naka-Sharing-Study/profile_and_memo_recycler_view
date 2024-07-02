@@ -19,7 +19,7 @@ class MainAdapter(private val mList: List<DataItem>) :
 
         fun bindTextViewWithoutImageView(dataItem: DataItem) {
             binding.profileTextView.text = dataItem.profileTextViewString
-            binding.profileEditText.text = dataItem.profileEditTextString
+            binding.profileEditText.setText(dataItem.profileEditTextString)
         }
     }
 
@@ -28,8 +28,8 @@ class MainAdapter(private val mList: List<DataItem>) :
 
         fun bindTextViewWithImageView(dataItem: DataItem) {
             binding.profileTextView.text = dataItem.profileTextViewString
-            binding.profileEditText.text = dataItem.profileEditTextString
-            binding.profileImageView = dataItem.profileImageViewInt
+            binding.profileEditText.setText(dataItem.profileEditTextString)
+            binding.profileImageView.setImageResource(dataItem.profileImageViewInt)
         }
     }
 
@@ -38,7 +38,7 @@ class MainAdapter(private val mList: List<DataItem>) :
 
         fun bindEditTextWithoutImageView(dataItem: DataItem) {
             binding.customProfileEditText.text = dataItem.profileCustomEditTextString
-            binding.profileEditText.text = dataItem.profileEditTextString
+            binding.profileEditText.setText(dataItem.profileEditTextString)
         }
     }
 

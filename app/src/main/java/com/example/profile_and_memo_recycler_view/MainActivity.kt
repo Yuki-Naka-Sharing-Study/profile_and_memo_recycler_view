@@ -155,7 +155,7 @@ class MainActivity : AppCompatActivity() {
 
         mList.add(
             DataItem(
-                "",
+                null,
                 "内容",
                 "カスタム1",
                 null
@@ -164,7 +164,7 @@ class MainActivity : AppCompatActivity() {
 
         mList.add(
             DataItem(
-                "",
+                null,
                 "内容",
                 "カスタム2",
                 null
@@ -173,7 +173,7 @@ class MainActivity : AppCompatActivity() {
 
         mList.add(
             DataItem(
-                "",
+                null,
                 "内容",
                 "カスタム3",
                 null,

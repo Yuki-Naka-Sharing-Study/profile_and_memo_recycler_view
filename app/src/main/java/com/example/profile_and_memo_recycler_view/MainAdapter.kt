@@ -42,14 +42,16 @@ class MainAdapter(private val mList: List<DataItem>) :
         }
     }
 
-//    override fun getItemViewType(position: Int): Int {
-//
-//        if (mList[position]. != null) {
-//            return
-//        } else {
-//            return
-//        }
-//    }
+    override fun getItemViewType(position: Int): Int {
+
+        if (mList[position].profileTextViewString != null) {
+            return ITEM_TEXT_VIEW_WITHOUT_IMAGE_VIEW
+        } else if (mList[position].profileImageViewInt != null) {
+            return ITEM_TEXT_VIEW_WITH_IMAGE_VIEW
+        } else {
+            return ITEM_EDIT_TEXT_WITHOUT_IMAGE_VIEW
+        }
+    }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
 

@@ -63,8 +63,6 @@ class MainAdapter(private val mList: List<DataItem>) :
             val binding = ItemTextViewWithImageViewBinding.inflate(LayoutInflater.from(parent.context), parent, false)
             return ItemTextViewWithImageViewHolder(binding)
 
-//        } else if (viewType == ITEM_EDIT_TEXT_WITHOUT_IMAGE_VIEW){
-
         } else {
             val binding = ItemEditTextWithoutImageViewBinding.inflate(LayoutInflater.from(parent.context), parent, false)
             return ItemEditTextWithoutImageViewHolder(binding)

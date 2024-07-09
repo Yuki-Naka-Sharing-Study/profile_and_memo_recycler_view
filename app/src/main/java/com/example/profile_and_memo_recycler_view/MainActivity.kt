@@ -28,18 +28,18 @@ class MainActivity : AppCompatActivity() {
     private fun prepareData() {
 
         mList.add(
-
             DataItem(
-                "フリガナ",
-                "タナカタロウ",
+                "名前",
+                "田中太郎",
                 null,
                 null
             )
         )
+
         mList.add(
             DataItem(
-                "名前",
-                "田中太郎",
+                "フリガナ",
+                "タナカタロウ",
                 null,
                 null
             )

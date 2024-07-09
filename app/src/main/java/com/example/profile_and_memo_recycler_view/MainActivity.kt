@@ -12,7 +12,8 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        binding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
         binding.recyclerView.setHasFixedSize(true)
         binding.recyclerView.layoutManager = LinearLayoutManager(this)
@@ -27,18 +28,18 @@ class MainActivity : AppCompatActivity() {
     private fun prepareData() {
 
         mList.add(
+
             DataItem(
-                "名前",
-                "田中太郎",
+                "フリガナ",
+                "タナカタロウ",
                 null,
                 null
             )
         )
-
         mList.add(
             DataItem(
-                "フリガナ",
-                "タナカタロウ",
+                "名前",
+                "田中太郎",
                 null,
                 null
             )
@@ -154,7 +155,7 @@ class MainActivity : AppCompatActivity() {
 
         mList.add(
             DataItem(
-                "",
+                null,
                 "内容",
                 "カスタム1",
                 null
@@ -163,7 +164,7 @@ class MainActivity : AppCompatActivity() {
 
         mList.add(
             DataItem(
-                "",
+                null,
                 "内容",
                 "カスタム2",
                 null
@@ -172,7 +173,7 @@ class MainActivity : AppCompatActivity() {
 
         mList.add(
             DataItem(
-                "",
+                null,
                 "内容",
                 "カスタム3",
                 null,

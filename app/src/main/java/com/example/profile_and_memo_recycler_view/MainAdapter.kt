@@ -19,7 +19,7 @@ class MainAdapter(private val mList: List<DataItem>) :
 
         fun bindTextViewWithoutImageView(dataItem: DataItem) {
             binding.profileTextView.text = dataItem.profileTextViewString
-            binding.profileEditText.setText(dataItem.profileEditTextString)
+            binding.profileEditText.setHint(dataItem.profileEditTextString)
         }
     }
 
@@ -28,7 +28,7 @@ class MainAdapter(private val mList: List<DataItem>) :
 
         fun bindTextViewWithImageView(dataItem: DataItem) {
             binding.profileTextView.text = dataItem.profileTextViewString
-            binding.profileEditText.setText(dataItem.profileEditTextString)
+            binding.profileEditText.setHint(dataItem.profileEditTextString)
             dataItem.profileImageViewInt?.let { binding.profileImageView.setImageResource(it) }
         }
     }
@@ -37,8 +37,8 @@ class MainAdapter(private val mList: List<DataItem>) :
         RecyclerView.ViewHolder(binding.root) {
 
         fun bindEditTextWithoutImageView(dataItem: DataItem) {
-            binding.customProfileEditText.setText(dataItem.profileCustomEditTextString)
-            binding.profileEditText.setText(dataItem.profileEditTextString)
+            binding.customProfileEditText.setHint(dataItem.profileCustomEditTextString)
+            binding.profileEditText.setHint(dataItem.profileEditTextString)
         }
     }
 
